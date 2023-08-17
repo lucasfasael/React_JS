@@ -4,10 +4,16 @@ export const CampoTexto = (props) => {
 
     const placeholderModificado = `${props.placeholder}...`
 
+    //let valor = 'batata'
+
+    const aoDigitar = (evento) => {
+        props.aoAlterado(evento.target.value)
+    }
+
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input required={props.obrigatorio} placeholder={placeholderModificado}></input>
+            <input value={props.valor} onChange={aoDigitar} required={props.obrigatorio} placeholder={placeholderModificado}></input>
         </div>
     )
 }
