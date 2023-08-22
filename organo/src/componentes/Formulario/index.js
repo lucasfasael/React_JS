@@ -23,6 +23,10 @@ export const Formulario = (props) => {
             time
         }
         )
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
